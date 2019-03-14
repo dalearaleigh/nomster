@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lilita+One');
 @import "bootstrap";
 
 .booyah-box {
@@ -18,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body { 
-  background: image_url('positive.png');
+  background: image_url('white-waves.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   }
 
@@ -27,5 +29,9 @@ body {
   box-shadow: 10px 10px 5px grey;
 }
 
+.navbar-inverse .navbar-brand {
+  color: #FDB833;
+  font-family: 'Lilita One', cursive; 
+}
 
 
