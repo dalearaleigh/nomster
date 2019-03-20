@@ -1,6 +1,5 @@
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost:3030' }
-end 
 
   config.cache_classes = false
 
