@@ -66,10 +66,12 @@ gem 'jquery-rails'
 gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
 gem 'simple_form'
-gem "font-awesome-rails"
-gem "devise"
-gem "geocoder"
-gem "figaro"
+gem 'font-awesome-rails'
+gem 'devise'
+gem 'geocoder'
+gem 'figaro'
+gem 'carrierwave', '~> 1.0'
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
