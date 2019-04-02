@@ -40,10 +40,44 @@
   </div>
 </div>
 
+<div class="booyah-box col-10 offset-1">
+<!--Photos Header--->
+<h1 class="float-left">Photos</h1>
+
+<!-- Photo Button Trigger Modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  Add Photo
+</button>
+
+<!-- Photo Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Add Photo</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+          <%= f.input :picture %>
+          <%= f.input :caption %>
+          <%= f.submit "Add Photo", class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="clear"</div>
 
 
 
 <div class="col-10 offset-1">
+
+  <!-- Comments Header--->
 <h1 class="float-left">Comments</h1>
 
 <!-- Comment Button Trigger Modal -->
@@ -51,12 +85,6 @@
   Add Comment
 </button>
 </div>
-
-<!-- Photo Button Trigger Modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
-  Add Photo
-</button>
-
 
 <div class="clear"</div>
 
@@ -83,34 +111,8 @@
     <a href="<%= photo.picture.url %>">
       <img src="<%= photo.picture.url %>" class="img-thumbnail"/>
     </a>
-    <%= print "HI THERE" %>
-    <%= print photo.inspect %>
-    <%= image_tag photo.picture %>
     <i><%= photo.caption %></i>
     <br />
   </div>
   <% end %>
 </div>
-
-<!-- Photo Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Add Photo</h4>
-      </div>
-      <div class="modal-body">
-        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-          <%= f.input :picture %>
-          <%= f.input :caption %>
-          <%= f.submit "Add Photo", class: 'btn btn-primary' %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="clear"</div>
