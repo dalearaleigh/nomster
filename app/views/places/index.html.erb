@@ -5,7 +5,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
 
-  
+
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <%= image_tag 'slider1.jpg', class: 'd-block img-fluid'  %>
@@ -38,17 +38,8 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
+<% paginate @posts %>
+<% @posts.each do |place| %>
 
 
 
@@ -82,3 +73,5 @@
 <% end %>
 </div>
 <% end %>
+
+<%= paginate @posts %>
